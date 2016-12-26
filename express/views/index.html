@@ -9,12 +9,10 @@
     <!-- Set the page to the width of the device and set the zoon level -->
     <meta name="viewport" content="width = device-width, initial-scale = 1">
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="/node_modules/express-bootstrap-service/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/scripts/express-bootstrap-service/bootstrap/dist/css/bootstrap.min.css">
     <!-- Angular from NPM -->
-    <script type="text/javascript" src="/node_modules/angular/angular.min.js"></script>
-    <script type="text/javascript" src="/node_modules/angular-route/angular-route.js"></script>
-    <!-- Angular Routing -->
-    <script src="/express/js/script.js"></script>
+    <script type="text/javascript" src="/scripts/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/scripts/angular-route/angular-route.js"></script>
 
 </head>
 <body>
@@ -22,21 +20,38 @@
 <div class="container" ng-controller="MainController">
 
     <ul class="nav nav-tabs nav-justified">
-        <li role="presentation"><a href="/">Temp</a></li>
-        <li role="presentation"><a href="#%252Flux">Lux</a></li>
-        <li role="presentation"><a href="#%252Ftouch">Touch</a></li>
+        <li role="presentation">
+            <a href="#!temp">
+                <span class="glyphicon glyphicon-fire" aria-hidden="true"></span>
+                Temp
+            </a>
+        </li>
+        <li role="presentation">
+            <a href="#!lux">
+                <span class="glyphicon glyphicon-certificate" aria-hidden="true"></span>
+                Lux
+            </a>
+        </li>
+        <li role="presentation">
+            <a href="#!touch">
+                <span class="glyphicon glyphicon-hand-up" aria-hidden="true"></span>
+                Touch
+            </a>
+        </li>
     </ul>
-
     <hr/>
 
     <div ng-view></div>
 
 </div>
 
-<!-- ajax from Google APIs -->
-<script src="/node_modules/jquery/dist/jquery.min.js"></script>
+
+<!-- Angular Routing -->
+<script src="/js/script.js"></script>
+<!-- JQuery from Node Modules -->
+<script src="/scripts/jquery/dist/jquery.min.js"></script>
 <!-- Latest compiled and minified JavaScript -->
-<script src="/node_modules/express-bootstrap-service/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/scripts/express-bootstrap-service/bootstrap/dist/js/bootstrap.min.js"></script>
 
 </body>
 </html>

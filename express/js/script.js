@@ -7,18 +7,22 @@ app.controller('MainController', function ($scope) {
     $scope.text = "Hello World!!!";
 });
 
-app.config(function ($routeProvider, $locationProvider) {
+app.config(function ($routeProvider) {
     $routeProvider
         .when("/temp", {
-            templateUrl: 'temp.html',
+            templateUrl: '/views/temp.html',
             controller: 'MainController'
         })
         .when("/lux", {
-            templateUrl: 'lux.html',
+            templateUrl: '/views/lux.html',
             controller: 'MainController'
         })
         .when("/touch", {
-            templateUrl: 'touch.html',
+            templateUrl: '/views/touch.html',
             controller: 'MainController'
+        })
+        .otherwise({
+            redirectTo: '/'
         });
 });
+
