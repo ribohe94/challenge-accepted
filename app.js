@@ -9,7 +9,5 @@ app.use('/views', express.static(__dirname + '/express/views'));
 app.use('/scripts', express.static(__dirname + '/node_modules'));
 app.use('/js', express.static(__dirname + '/express/js'));
 
-
-
 app.listen(port);
-console.log('Now serving http://localhost:'+port+'/views/index.html' + ' This is dir: ' + __dirname);
+console.log('Now serving http://localhost:'+port+'/views/index.html');

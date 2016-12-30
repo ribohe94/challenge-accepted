@@ -4,7 +4,9 @@
 var app = angular.module("app", ["ngRoute"]);
 
 app.controller('MainController', function ($scope) {
-    $scope.text = "Hello World!!!";
+    $.get('http://localhost:3001/data', function (data) {
+        $scope.temp = data;
+    });
 });
 
 app.config(function ($routeProvider) {
